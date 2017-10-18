@@ -12,6 +12,7 @@
 
 #include "libft.h"
 #include "libftasm.h"
+#include <stdint.h>
 
 void	ft_putbase_uint64(uint64_t nb, unsigned int const base)
 {
