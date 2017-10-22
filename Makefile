@@ -44,7 +44,7 @@ OBJ_DIR = obj
 
 OBJ = $(SRC:%.c=obj/%.o)
 
-all: libasm obj $(NAME)
+all: libasm $(NAME)
 
 $(NAME): $(OBJ)
 	ar rc $@ $(OBJ)
@@ -53,8 +53,8 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CPP) $(FLAGS) -c $< -o $@ -I includes
 
 libasm:
-	make -C libftasm
-	ln -fs libftasm/libfts.a libftasm.a
+	@make -C libftasm
+	@ln -fs libftasm/libfts.a libftasm.a
 
 obj:
 	mkdir -p $(OBJ_DIR)
@@ -69,3 +69,5 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: clean fclean all
+
+.PHONY: all libasm obj clean fclean re libftasm

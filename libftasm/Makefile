@@ -32,7 +32,7 @@ OBJ_DIR = obj
 
 OBJ = $(SRC:%.s=obj/%.o)
 
-all: symlinks obj $(NAME)
+all: symlinks $(NAME)
 
 $(NAME): $(OBJ)
 	ar rc $@ $(OBJ)
@@ -44,12 +44,7 @@ obj:
 	mkdir -p $(OBJ_DIR)
 
 symlinks:
-	ln -sf $(HEADER) includes/libftasm.h
-	ln -sf $(SUB_SRC)/ft_putstr.s $(SRC_DIR)/ft_putstr.s
-	ln -sf $(SUB_SRC)/ft_putstr_fd.s $(SRC_DIR)/ft_putstr_fd.s
-	ln -sf $(SUB_SRC)/ft_puts.s $(SRC_DIR)/ft_puts.s
-	ln -sf $(SUB_SRC)/ft_putchar.s $(SRC_DIR)/ft_putchar.s
-	ln -sf $(SUB_SRC)/ft_putchar_fd.s $(SRC_DIR)/ft_putchar_fd.s
+	@sh configure
 
 test:
 	gcc -o $(NAME_TEST) tests/tests.c -I include $(NAME)
@@ -62,3 +57,5 @@ fclean: clean
 		/bin/rm -f $(NAME) $(NAME_TEST) $(NAME_TEST_CAT)
 
 re: clean fclean all
+
+.PHONY: all fclean clean test re symlinks obj
