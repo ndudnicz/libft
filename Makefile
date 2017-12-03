@@ -8,7 +8,7 @@ ifeq ($(shell uname -s),Linux)
 	HEADER := libftasm_linux.h
 	SRC := ft_putendl.c ft_putendl_fd.c ft_putnbr.c \
 		ft_strrchr.c ft_strdel.c \
-		ft_memalloc.c ft_strclr.c ft_strncpy.c ft_memmove.c \
+		ft_memalloc.c ft_strncpy.c ft_memmove.c \
 		ft_memchr.c ft_memcmp.c ft_strncat.c ft_putnchar.c \
 		ft_strstr.c ft_strnstr.c ft_strncmp.c ft_memdel.c \
 		ft_strnew.c ft_include_strstr.c ft_sleep.c ft_numberlen.c \
@@ -23,7 +23,7 @@ else
 	HEADER := libftasm_macosx.h
 	SRC := ft_putendl.c ft_putendl_fd.c ft_putnbr.c \
 		ft_strrchr.c ft_strdel.c \
-		ft_memalloc.c ft_strclr.c ft_strncpy.c ft_memmove.c \
+		ft_memalloc.c ft_strncpy.c ft_memmove.c \
 		ft_memchr.c ft_memcmp.c ft_strncat.c ft_putnchar.c \
 		ft_strstr.c ft_strnstr.c ft_strncmp.c ft_memdel.c \
 		ft_strnew.c ft_include_strstr.c ft_sleep.c ft_numberlen.c \

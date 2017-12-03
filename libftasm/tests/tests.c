@@ -265,6 +265,14 @@ void	test_strcmp(void)
 	printf("7:%s\n", strcmp("", "") == ft_strcmp("", "") ? "ok" : "nope");
 }
 
+void	test_strclr(void)
+{
+	printf("%s\n", "ft_strclr:");
+	char *s = strdup("toto");
+	ft_strclr(s);
+	printf("1:%s\n", strlen(s) ? "nope" : "ok");
+}
+
 int		main(int ac, char **av)
 {
 	test_isalpha();
@@ -289,5 +297,6 @@ int		main(int ac, char **av)
 	test_putchar();
 	test_putchar_fd();
 	test_strcmp();
+	test_strclr();
 	return 0;
 }
