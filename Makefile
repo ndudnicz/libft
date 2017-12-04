@@ -1,11 +1,6 @@
 NAME = libft.a
-
 OBJ = $(SRC:%.c=%.o)
-
 ifeq ($(shell uname -s),Linux)
-	CC := nasm
-	FLAGS := -f elf64
-	HEADER := libftasm_linux.h
 	SRC := ft_putendl.c ft_putendl_fd.c ft_putnbr.c \
 		ft_strrchr.c ft_strdel.c \
 		ft_memalloc.c ft_strncpy.c ft_memmove.c \
@@ -18,9 +13,6 @@ ifeq ($(shell uname -s),Linux)
 		ft_itoa_base.c ft_putbase.c ft_include_int.c ft_atoi_base.c \
 		ft_putbase_uint64.c ft_strcpy.c ft_strdup.c ft_memccpy.c
 else
-	CC := /Users/ndudnicz/.brew/bin/nasm
-	FLAGS := -f macho64
-	HEADER := libftasm_macosx.h
 	SRC := ft_putendl.c ft_putendl_fd.c ft_putnbr.c \
 		ft_strrchr.c ft_strdel.c \
 		ft_memalloc.c ft_strncpy.c ft_memmove.c \
@@ -33,15 +25,10 @@ else
 		ft_itoa_base.c ft_putbase.c ft_include_int.c ft_atoi_base.c \
 		ft_putbase_uint64.c ft_strcpy.c ft_memccpy.c
 endif
-
-CPP = gcc
-
+CXX = gcc
 FLAGS = -Werror -Wextra -Wall
-
 SRC_DIR = src
-
 OBJ_DIR = obj
-
 OBJ = $(SRC:%.c=obj/%.o)
 
 all: libasm $(NAME)
@@ -50,7 +37,7 @@ $(NAME): $(OBJ)
 	ar rc $@ $(OBJ)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CPP) $(FLAGS) -c $< -o $@ -I includes
+	$(CXX) $(FLAGS) -c $< -o $@ -I includes
 
 libasm:
 	@make -C libftasm
