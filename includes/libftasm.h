@@ -1,1 +1,1 @@
-../libftasm/includes/libftasm.h
+libftasm_macosx.hh

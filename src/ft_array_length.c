@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_array_length.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndudnicz <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ndudnicz <ndudnicz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 07:19:21 by ndudnicz          #+#    #+#             */
-/*   Updated: 2015/11/24 07:21:50 by ndudnicz         ###   ########.fr       */
+/*   Created: 2017/11/02 18:45:53 by ndudnicz          #+#    #+#             */
+/*   Updated: 2017/11/02 18:45:54 by ndudnicz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "libftasm.h"
-
-int		ft_putendl(char const *s)
+int		ft_array_length(char const **array)
 {
-	int const	ret = ft_putstr(s) + 1;
+	int		i;
 
-	ft_putchar('\n');
-	return (ret);
+	i = 0;
+	while (array && array[i])
+		i++;
+	return (i);
 }

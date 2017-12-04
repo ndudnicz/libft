@@ -41,7 +41,7 @@ char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s);
 char		**ft_strsplit(char const *s, char c);
 char		*ft_itoa(int n);
-void		ft_putendl(char const *s);
+int			ft_putendl(char const *s);
 void		ft_putnbr(int n);
 void		ft_putendl_fd(char const *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
@@ -61,5 +61,9 @@ int			ft_numberlen(long int number, int base);
 int			gnl(int const fd, char **line);
 int			ft_atoi_base(char *str, int base);
 char		*ft_strdup(char const *s);
+char		*ft_ltoa(long int n);
+char		*ft_strjoin_free(char const *s1, char const *s2,
+								char const a, char const b);
+int			ft_array_length(char const **array);
 
 #endif
