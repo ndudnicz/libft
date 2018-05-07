@@ -6,7 +6,7 @@
 /*   By: ndudnicz <ndudnicz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/30 11:10:44 by ndudnicz          #+#    #+#             */
-/*   Updated: 2017/10/20 10:34:06 by ndudnicz         ###   ########.fr       */
+/*   Updated: 2018/05/07 18:58:55 by ndudnicz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
-char			*ft_strcat(char *restrict s1, char const *restrict s2);
-void			*ft_memcpy(void *restrict dst, const void *restrict src,
+char			*ft_strcat(char *s1, char const *s2);
+void			*ft_memcpy(void *dst, const void *src,
 								size_t n);
 void			*ft_memset(void *b, int c, size_t len);
 char			*ft_strdup(const char *s);
