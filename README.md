@@ -7,6 +7,6 @@ Ce premier projet en tant qu'étudiant de 42 va vous faire consolider vos acquis
   - nasm
 
   ```shell
-  cd libftasm && ./configure && cd ..
-  make
+  $> cd libftasm && ./configure && cd ..
+  $> make
   ```
