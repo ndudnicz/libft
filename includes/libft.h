@@ -67,5 +67,10 @@ char		*ft_strjoin_free(char const *s1, char const *s2,
 int			ft_array_length(char const **array);
 void		ft_qsort(void **array, int start, int end,
 							int (*compare)(void*, void*));
+void*
+ft_calloc(
+	size_t const size
+);
+
 
 #endif
