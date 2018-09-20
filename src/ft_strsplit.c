@@ -42,10 +42,10 @@ char			**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	len = 0;
-	if (!s)
+	if (s == NULL)
 		return (NULL);
 	nb_words = ft_nbwords(s, c);
-	if ((tab = (char**)malloc(sizeof(char*) * nb_words + 1)) == NULL)
+	if ((tab = (char**)ft_calloc(sizeof(char*) * nb_words + 1)) == NULL)
 		return (NULL);
 	while (i < nb_words)
 	{
@@ -58,6 +58,5 @@ char			**ft_strsplit(char const *s, char c)
 		s = s + len;
 		i++;
 	}
-	tab[i] = NULL;
 	return (tab);
 }

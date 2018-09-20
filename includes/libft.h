@@ -6,7 +6,7 @@
 /*   By: ndudnicz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 11:50:56 by ndudnicz          #+#    #+#             */
-/*   Updated: 2018/09/20 10:41:51 by ndudnicz         ###   ########.fr       */
+/*   Updated: 2017/10/20 10:39:55 by ndudnicz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void		ft_putbase(long int value, char base, char upper);
 int			ft_include_int(int *array, int size, int number);
 int			ft_include_strstr(char **array, char *str);
 void		ft_sleep(int second);
+void		ft_usleep(int msecond);
 int			ft_putnstr(char *str, int n);
 int			ft_putnchar(char c, int n);
 int			ft_numberlen(long int number, int base);
@@ -67,6 +68,7 @@ char		*ft_strjoin_free(char const *s1, char const *s2,
 int			ft_array_length(char const **array);
 void		ft_qsort(void **array, int start, int end,
 							int (*compare)(void*, void*));
+
 void		*ft_calloc(
 	size_t const size
 );

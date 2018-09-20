@@ -11,19 +11,19 @@
 /* ************************************************************************** */
 
 /*
-** Not a true sleep, just something that will slows the execution
+** Not a true usleep, just something that will slows the execution
 */
 
-void	ft_sleep(int second)
+void	ft_usleep(int msecond)
 {
 	int		i;
 	int		n;
 
 	n = 0;
-	while (n < second)
+	while (n < msecond)
 	{
 		i = 0;
-		while (i < 500200000)
+		while (i < 500200)
 			i++;
 		n++;
 	}
